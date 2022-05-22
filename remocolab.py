@@ -190,7 +190,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     port = m.group(2)
     ssh_common_options += f" -p {port}"
   elif tunnel == "argotunnel":
-    _download("https://github.com/zz7925932/remocolab/releases/download/untagged-2d3da66c315691df7d85/cloudflared-linux-amd64", "cloudflared")
+    _download("http://drive.xiaohei.ml/0:down/%E8%BD%AF%E4%BB%B6/cloudflared-linux-amd64", "cloudflared")
     #shutil.unpack_archive("cloudflared.tgz")
     pathlib.Path("cloudflared").chmod(stat.S_IXUSR)
     cfd_proc = subprocess.Popen(
